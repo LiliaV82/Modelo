@@ -15,37 +15,37 @@ def index():
         try:
             # Obtener los datos del formulario (excluyendo Dalc y Walc si se quiere predecir una probabilidad general)
             features = [
-            request.form.get('school', type=int),
-            request.form.get('sex', type=int),
-            request.form.get('age', type=int),
-            request.form.get('address', type=int),
-            request.form.get('famsize', type=int),
-            request.form.get('Pstatus', type=int),
-            request.form.get('Medu', type=int),
-            request.form.get('Fedu', type=int),
-            request.form.get('Mjob', type=int),
-            request.form.get('Fjob', type=int),
-            request.form.get('reason', type=int),
-            request.form.get('guardian', type=int),
-            request.form.get('traveltime', type=int),
-            request.form.get('studytime', type=int),
-            request.form.get('failures', type=int),
-            request.form.get('schoolsup', type=int),
-            request.form.get('famsup', type=int),
-            request.form.get('paid', type=int),
-            request.form.get('activities', type=int),
-            request.form.get('nursery', type=int),
-            request.form.get('higher', type=int),
-            request.form.get('internet', type=int),
-            request.form.get('romantic', type=int),
-            request.form.get('famrel', type=int),
-            request.form.get('freetime', type=int),
-            request.form.get('goout', type=int),
-            request.form.get('Dalc', type=int),
-            request.form.get('Walc', type=int),
-            request.form.get('health', type=int),
-            request.form.get('absences', type=int),
-            request.form.get('G1', type=int)
+                request.form.get('school', type=int),
+                request.form.get('sex', type=int),
+                request.form.get('age', type=int),
+                request.form.get('address', type=int),
+                request.form.get('famsize', type=int),
+                request.form.get('Pstatus', type=int),
+                request.form.get('Medu', type=int),
+                request.form.get('Fedu', type=int),
+                request.form.get('Mjob', type=int),
+                request.form.get('Fjob', type=int),
+                request.form.get('reason', type=int),
+                request.form.get('guardian', type=int),
+                request.form.get('traveltime', type=int),
+                request.form.get('studytime', type=int),
+                request.form.get('failures', type=int),
+                request.form.get('schoolsup', type=int),
+                request.form.get('famsup', type=int),
+                request.form.get('paid', type=int),
+                request.form.get('activities', type=int),
+                request.form.get('nursery', type=int),
+                request.form.get('higher', type=int),
+                request.form.get('internet', type=int),
+                request.form.get('romantic', type=int),
+                request.form.get('famrel', type=int),
+                request.form.get('freetime', type=int),
+                request.form.get('goout', type=int),
+                request.form.get('Dalc', type=int),
+                request.form.get('Walc', type=int),
+                request.form.get('health', type=int),
+                request.form.get('absences', type=int),
+                request.form.get('G1', type=int)
             ]
 
             # Convertir a un array numpy y escalar
@@ -57,7 +57,6 @@ def index():
             prob_walc = model_walc.predict_proba(features_scaled)[0][1] * 100
 
             # Calcular la probabilidad general
-            # Puedes ajustar el cálculo según cómo quieras combinar las dos probabilidades
             prob_general = (prob_dalc + prob_walc) / 2
 
             return render_template('form.html', prediction_general=prob_general)
