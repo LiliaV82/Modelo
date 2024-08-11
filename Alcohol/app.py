@@ -4,7 +4,7 @@ import numpy as np
 
 app = Flask(__name__)
 
-# Cargar los modelos y el escalador
+# Load models and scaler
 model_dalc = joblib.load('model_dalc.pkl')
 model_walc = joblib.load('model_walc.pkl')
 scaler = joblib.load('scaler.pkl')
@@ -13,7 +13,7 @@ scaler = joblib.load('scaler.pkl')
 def index():
     if request.method == 'POST':
         try:
-            # Obtener los datos del formulario (excluyendo Dalc y Walc si se quiere predecir una probabilidad general)
+            # Get form data
             features = [
                 request.form.get('school', type=int),
                 request.form.get('sex', type=int),
@@ -48,21 +48,21 @@ def index():
                 request.form.get('G1', type=int)
             ]
 
-            # Convertir a un array numpy y escalar
+            # Convert to numpy array and scale
             features = np.array(features).reshape(1, -1)
             features_scaled = scaler.transform(features)
 
-            # Realizar las predicciones
+            # Make predictions
             prob_dalc = model_dalc.predict_proba(features_scaled)[0][1] * 100
             prob_walc = model_walc.predict_proba(features_scaled)[0][1] * 100
 
-            # Calcular la probabilidad general
-            prob_general = (prob_dalc + prob_walc) / 2
+            # Calculate general probability and round it
+            prob_general = round((prob_dalc + prob_walc) / 2, 2)
 
             return render_template('form.html', prediction_general=prob_general)
 
         except Exception as e:
-            print("Error durante la predicción:", e)
+            print("Error during prediction:", e)
             return render_template('form.html', prediction_general=None, error=str(e))
 
     return render_template('form.html', prediction_general=None)

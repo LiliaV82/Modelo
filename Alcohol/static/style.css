@@ -1,201 +1,273 @@
 * {
-    
     margin: 0;
-    
     padding: 0;
-    
     box-sizing: border-box;
-    
-    font-family: 'poppins', sans-serif;
-    
-    }
-    
-    body {
-    
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
     display: flex;
-    
     align-items: center;
-    
     justify-content: center;
-    
     min-height: 100vh;
-    
     background-image: url("images.jpg");
-    
     background-repeat: no-repeat;
-    
     background-position: center;
-    
     background-size: cover;
-    
-    }
+    background-attachment: fixed;
+    padding: 2rem;
+}
 
-    
-    section {
-    
+form {
+    background-color: #f5f5f5;
+    padding: 2rem;
+    margin: 2rem auto;
+    border-radius: 15px;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+}
+
+/* Títulos de secciones */
+form h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* Estilizar las etiquetas */
+form label {
+    font-size: 1.25rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+/* Campos de entrada */
+form input[type="text"],
+form input[type="number"],
+form input[type="email"],
+form select,
+form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 1rem;
+    background-color: #fff;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s;
+}
+
+/* Efecto hover en campos de entrada */
+form input[type="text"]:hover,
+form input[type="number"]:hover,
+form input[type="email"]:hover,
+form select:hover,
+form textarea:hover {
+    border-color: #ff5722;
+}
+
+/* Campos de entrada enfocados */
+form input[type="text"]:focus,
+form input[type="number"]:focus,
+form input[type="email"]:focus,
+form select:focus,
+form textarea:focus {
+    border-color: #ff5722;
+    outline: none;
+    box-shadow: 0 0 8px rgba(255, 87, 34, 0.2);
+}
+
+/* Estilizar las secciones del cuestionario */
+section {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: #e0f7fa;
+    border-left: 5px solid #00acc1;
+}
+
+/* Estilizar las leyendas o títulos de secciones */
+section legend {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #00acc1;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: #000;
+    margin: 1rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     position: relative;
-    
-    max-width: 1000px;
-    
-    background-color: transparent;
-    
-    border: 2px solid rgba(255, 255, 255, 0.5);
-    
-    border-radius: 20px;
-    
-    backdrop-filter: blur(5px);
-    
-    display: flex;
-    
-    justify-content: center;
-    
-    align-items: center;
-    padding: 2rem 3rem;
-    }
+    padding-bottom: 0.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 3px;
+    background-color: #000;
+    border-radius: 5px;
+    transition: width 0.4s;
+}
+
+h2:hover::after {
+    width: 80%;
+}
 
 
-        
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
 
-        
-        .forget {
-        
-        margin: 35px 0;
-        
-        font-size: 0.85rem;
-        
-        color: #fff;
-        
-        display: flex;
-        
-        justify-content: space-between;
-        
-        }
-    
-h1 {
+th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
 
-    
-            
-            font-size: 2rem;
-            
-            color: #fff;
-            
-            text-align: center;
-            
-            }
-            h2 {
+th {
+    background-color: #f4f4f4;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
 
-    
-            
-                font-size: 1.7rem;
-                
-                text-align: center;
-                
-                
-                }
-           
-            
- 
-            
-.inputbox label {
-            
-            position: absolute;
-            
-            top: 50%;
-            
-            left: 5px;
-            
-            transform: translateY(-50%);
-            
-            color: #fff;
-            
-            font-size: 1rem;
-            
-            pointer-events: none;
-            
-            transition: all 0.5s ease-in-out;
-            
-            }
-            
-            input:focus ~ label,
-            
-            input:valid ~ label {
-                top: -5px;
-            }
-.forget label {
+td input {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #000000;
+    outline: none;
+    transition: border 0.3s, box-shadow 0.3s;
+    font-size: 1rem;
+}
 
-            
-                
-                display: flex;
-                align-items:center;
-            
-                }
-                
-                
-.forget label input {
-                
-                margin-right: 3px;
-                
-                }
-                
-                
-                
-                button {
-                
-                width: 100%;
-                
-                height: 40px;
-                
-                border-radius: 40px;
-                
-                background-color: rgb(255, 255, 255, 1);
-                
-                border: none;
-                
-                outline: none;
-                
-                cursor: pointer;
-                
-                font-size: 1rem;
-                
-                font-weight: 600;
-                transition:all 0.4s ease;
-                }
-                button:hover {
-                    background-color: rgb(255, 255, 255, 0.5);
-                }
-                
-                
-                
-                
-                
-               
-               
-              
-            
-                .prediction-result {
-                    margin-top: 20px;
-                    padding: 10px;
-                    background-color: #fff;
-                    border: 1px solid #ccc;
-                }
-                .fondo{
-                   
-    
-                        display: flex;
-                        
-                        align-items: center;
-                        
-                        justify-content: center;
-                        
-                        min-height: 100vh;
-                        
-                        background-image: url("");
-                        
-                        background-repeat: no-repeat;
-                        
-                        background-position: center;
-                        
-                        background-size: cover;
-                        
-                        
-                }
+td input:focus {
+    border-color: #ff5722;
+    box-shadow: 0 0 5px rgba(255, 87, 34, 0.5);
+}
+
+.submit-section {
+    width: 100%;
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+button {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 5px;
+    background-color: #28a745;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    transition: background-color 0.4s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+}
+
+button:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+    color: #ffffff;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+
+.error-message {
+    margin-top: 1rem;
+    color: red;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-top: 60px;
+}
+
+/* Modal content styling for prediction result */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.modal-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #000;
+}
+
+.modal-content p {
+    font-size: 1.5rem;
+    color: #000000;
+    font-weight: bold;
+    margin: 3rem;
+}
+
+/* Adjust the size of the close button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+input[type="submit"] {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #000000; /* Bright color for emphasis */
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+}
+
+input[type="submit"]:hover {
+    background-color: #878787; /* Slightly darker on hover */
+    transform: scale(1.05);
+    color: #000;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
