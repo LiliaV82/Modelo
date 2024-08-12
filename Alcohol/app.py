@@ -5,9 +5,9 @@ import numpy as np
 app = Flask(__name__)
 
 # Load models and scaler
-model_dalc = joblib.load('model_dalc.pkl')
-model_walc = joblib.load('model_walc.pkl')
-scaler = joblib.load('scaler.pkl')
+model_xgb = joblib.load('xgb_model.pkl')
+model_svm = joblib.load('svm_model.pkl')
+scaler = joblib.load('scaler2.pkl')
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
@@ -45,19 +45,20 @@ def index():
                 request.form.get('Walc', type=int),
                 request.form.get('health', type=int),
                 request.form.get('absences', type=int),
-                request.form.get('G1', type=int)
+                request.form.get('G1', type=int),
+                request.form.get('G2', type=int)
             ]
 
             # Convert to numpy array and scale
             features = np.array(features).reshape(1, -1)
             features_scaled = scaler.transform(features)
 
-            # Make predictions
-            prob_dalc = model_dalc.predict_proba(features_scaled)[0][1] * 100
-            prob_walc = model_walc.predict_proba(features_scaled)[0][1] * 100
+            # Make predictions using both models
+            prob_xgb = model_xgb.predict_proba(features_scaled)[0][1] * 100
+            prob_svm = model_svm.predict_proba(features_scaled)[0][1] * 100
 
             # Calculate general probability and round it
-            prob_general = round((prob_dalc + prob_walc) / 2, 2)
+            prob_general = round((prob_xgb + prob_svm) / 2, 2)
 
             return render_template('form.html', prediction_general=prob_general)
 
