@@ -22,10 +22,10 @@ form {
     background-color: #f5f5f5;
     padding: 2rem;
     margin: 2rem auto;
-    border-radius: 15px;
-    max-width: 800px;
+    border-radius: 35px;
+    max-width: 90%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-
+    font-size: 1.5rem;
 }
 
 /* Títulos de secciones */
@@ -43,6 +43,7 @@ form label {
     color: #555;
     margin-bottom: 0.5rem;
     display: block;
+    
 }
 
 /* Campos de entrada */
@@ -51,12 +52,12 @@ form input[type="number"],
 form input[type="email"],
 form select,
 form textarea {
-    width: 100%;
+    width: 10rem;
     padding: 0.75rem;
     margin-bottom: 1.5rem;
     border: 1px solid #ddd;
     border-radius: 10px;
-    font-size: 1rem;
+    font-size: 1.5rem;
     background-color: #fff;
     box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: border-color 0.3s;
@@ -89,6 +90,7 @@ section {
     border-radius: 10px;
     background-color: #e0f7fa;
     border-left: 5px solid #00acc1;
+    width: 90%;
 }
 
 /* Estilizar las leyendas o títulos de secciones */
@@ -99,9 +101,9 @@ section legend {
 }
 
 h2 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     color: #000;
-    margin: 1rem;
+    margin: 2rem;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     position: relative;
     padding-bottom: 0.5rem;
@@ -224,7 +226,7 @@ button:hover {
 }
 
 .modal-content h2 {
-    font-size: 2rem;
+    font-size: 3rem;
     margin-bottom: 1rem;
     color: #000;
 }
@@ -240,7 +242,7 @@ button:hover {
 .close {
     color: #aaa;
     float: right;
-    font-size: 20px;
+    font-size: 30px;
     font-weight: bold;
 }
 
@@ -252,7 +254,7 @@ button:hover {
 }
 
 input[type="submit"] {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: bold;
     color: #fff;
     background-color: #000000; /* Bright color for emphasis */
@@ -263,6 +265,9 @@ input[type="submit"] {
     transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-transform: uppercase;
+    margin: 2rem;
+    max-width: 100%;
+    width: 95%;
 }
 
 input[type="submit"]:hover {
@@ -270,4 +275,5 @@ input[type="submit"]:hover {
     transform: scale(1.05);
     color: #000;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    
 }

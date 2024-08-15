@@ -8,141 +8,108 @@
 </head>
 <body>
     <section>
-        <h2>Formulario de probabilidad de Alcohol 22</h2>
+        <h2>Formulario de Probabilidad de Alcoholismo</h2>
         <form action="/" method="post">
             <table>
-                <tr>
-                    <td><label for="school">Escuela (0: GP, 1: MS):</label></td>
-                    <td><input type="number" id="school" name="school" required></td>
-                </tr>
-                <tr>
-                    <td><label for="sex">Sexo (0: F, 1: M):</label></td>
-                    <td><input type="number" id="sex" name="sex" required></td>
-                </tr>
-                <tr>
-                    <td><label for="age">Edad:</label></td>
-                    <td><input type="number" id="age" name="age" required></td>
-                </tr>
-                <tr>
-                    <td><label for="address">Dirección (0: Urbana, 1: Rural):</label></td>
-                    <td><input type="number" id="address" name="address" required></td>
-                </tr>
-                <tr>
-                    <td><label for="famsize">Tamaño de la Familia (0: ≤3 miembros, 1: >3 miembros):</label></td>
-                    <td><input type="number" id="famsize" name="famsize" required></td>
-                </tr>
-                <tr>
-                    <td><label for="Pstatus">Estado Parental (0: Juntos, 1: Separados):</label></td>
-                    <td><input type="number" id="Pstatus" name="Pstatus" required></td>
-                </tr>
-                <tr>
-                    <td><label for="Medu">Educación de la Madre (0-4):</label></td>
-                    <td><input type="number" id="Medu" name="Medu" required></td>
-                </tr>
-                <tr>
-                    <td><label for="Fedu">Educación del Padre (0-4):</label></td>
-                    <td><input type="number" id="Fedu" name="Fedu" required></td>
-                </tr>
-                <tr>
-                    <td><label for="Mjob">Trabajo de la Madre (0: Teacher, 1: Health, 2: Services, 3: At Home, 4: Other):</label></td>
-                    <td><input type="number" id="Mjob" name="Mjob" required></td>
-                </tr>
-                <tr>
-                    <td><label for="Fjob">Trabajo del Padre (0: Teacher, 1: Health, 2: Services, 3: At Home, 4: Other):</label></td>
-                    <td><input type="number" id="Fjob" name="Fjob" required></td>
-                </tr>
-                <tr>
-                    <td><label for="reason">Razón para Elegir la Escuela (0: Cerca de casa, 1: Reputación de la escuela, 2: Preferencia del curso, 3: Otro):</label></td>
-                    <td><input type="number" id="reason" name="reason" required></td>
-                </tr>
-                <tr>
-                    <td><label for="guardian">Tutor (0: Madre, 1: Padre, 2: Otro):</label></td>
-                    <td><input type="number" id="guardian" name="guardian" required></td>
-                </tr>
-                <tr>
-                    <td><label for="traveltime">Tiempo de Viaje (1: Menos de 15 minutos, 2: 15 a 30 minutos, 3: 30 minutos a 1 hora, 4: Más de 1 hora):</label></td>
-                    <td><input type="number" id="traveltime" name="traveltime" required></td>
-                </tr>
-                <tr>
-                    <td><label for="studytime">Tiempo de Estudio (1: Menos de 2 horas, 2: 2 a 5 horas, 3: 5 a 10 horas, 4: Más de 10 horas):</label></td>
-                    <td><input type="number" id="studytime" name="studytime" required></td>
-                </tr>
-                <tr>
-                    <td><label for="failures">Fracasos Pasados (0-4):</label></td>
-                    <td><input type="number" id="failures" name="failures" required></td>
-                </tr>
-                <tr>
-                    <td><label for="schoolsup">Apoyo Educativo Extra (0: No, 1: Sí):</label></td>
-                    <td><input type="number" id="schoolsup" name="schoolsup" required></td>
-                </tr>
-                <tr>
-                    <td><label for="famsup">Apoyo Educativo Familiar (0: No, 1: Sí):</label></td>
-                    <td><input type="number" id="famsup" name="famsup" required></td>
-                </tr>
-                <tr>
-                    <td><label for="paid">Clases Extra Pagadas (0: No, 1: Sí):</label></td>
-                    <td><input type="number" id="paid" name="paid" required></td>
-                </tr>
-                <tr>
-                    <td><label for="activities">Actividades Extracurriculares (0: No, 1: Sí):</label></td>
-                    <td><input type="number" id="activities" name="activities" required></td>
-                </tr>
-                <tr>
-                    <td><label for="nursery">Asistió a Guardería (0: No, 1: Sí):</label></td>
-                    <td><input type="number" id="nursery" name="nursery" required></td>
-                </tr>
-                <tr>
-                    <td><label for="higher">Desea Educación Superior (0: No, 1: Sí):</label></td>
-                    <td><input type="number" id="higher" name="higher" required></td>
-                </tr>
-                <tr>
-                    <td><label for="internet">Acceso a Internet en Casa (0: No, 1: Sí):</label></td>
-                    <td><input type="number" id="internet" name="internet" required></td>
-                </tr>
-                <tr>
-                    <td><label for="romantic">En una Relación Romántica (0: No, 1: Sí):</label></td>
-                    <td><input type="number" id="romantic" name="romantic" required></td>
-                </tr>
-                <tr>
-                    <td><label for="famrel">Calidad de las Relaciones Familiares (1: Muy Malo, 5: Excelente):</label></td>
-                    <td><input type="number" id="famrel" name="famrel" required></td>
-                </tr>
-                <tr>
-                    <td><label for="freetime">Tiempo Libre después de la Escuela (1: Muy Poco, 5: Mucho):</label></td>
-                    <td><input type="number" id="freetime" name="freetime" required></td>
-                </tr>
-                <tr>
-                    <td><label for="goout">Salir con Amigos (1: Muy Poco, 5: Mucho):</label></td>
-                    <td><input type="number" id="goout" name="goout" required></td>
-                </tr>
-                <tr>
-                    <td><label for="Dalc">Consumo Diario de Alcohol (1-5):</label></td>
-                    <td><input type="number" id="Dalc" name="Dalc" required></td>
-                </tr>
-                <tr>
-                    <td><label for="Walc">Consumo de Alcohol durante el Fin de Semana (1-5):</label></td>
-                    <td><input type="number" id="Walc" name="Walc" required></td>
-                </tr>
-                <tr>
-                    <td><label for="health">Estado de Salud Actual (1: Muy Malo, 5: Muy Bueno):</label></td>
-                    <td><input type="number" id="health" name="health" required></td>
-                </tr>
-                <tr>
-                    <td><label for="absences">Ausencias:</label></td>
-                    <td><input type="number" id="absences" name="absences" required></td>
-                </tr>
-                <tr>
-                    <td><label for="G1">Calificación del Primer Periodo (0-20):</label></td>
-                    <td><input type="number" id="G1" name="G1" required></td>
-                </tr>
-                <tr>
-                    <td><label for="G2">Calificación del Segundo Periodo (0-20):</label></td>
-                    <td><input type="number" id="G2" name="G2" required></td>
-                </tr>
-                <tr>
-                    <td colspan="2"><input type="submit" value="Predecir"></td>
-                </tr>
+                <thead>
+                    <tr>
+                        <th colspan="2">Información Personal</th>
+                        <th colspan="2">Información Académica</th>
+                        <th colspan="2">Comportamiento y Salud</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Información Personal -->
+                    <tr>
+                        <td><label for="school">Escuela (0: GP, 1: MS):</label></td>
+                        <td><input type="number" id="school" name="school" required></td>
+                        <td><label for="Medu">Educación de la Madre (0-4):</label></td>
+                        <td><input type="number" id="Medu" name="Medu" required></td>
+                        <td><label for="Dalc">Consumo Diario de Alcohol (1-5):</label></td>
+                        <td><input type="number" id="Dalc" name="Dalc" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="sex">Sexo (0: F, 1: M):</label></td>
+                        <td><input type="number" id="sex" name="sex" required></td>
+                        <td><label for="Fedu">Educación del Padre (0-4):</label></td>
+                        <td><input type="number" id="Fedu" name="Fedu" required></td>
+                        <td><label for="Walc">Consumo de Alcohol durante el Fin de Semana (1-5):</label></td>
+                        <td><input type="number" id="Walc" name="Walc" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="age">Edad:</label></td>
+                        <td><input type="number" id="age" name="age" required></td>
+                        <td><label for="Mjob">Trabajo de la Madre:</label></td>
+                        <td><input type="number" id="Mjob" name="Mjob" required></td>
+                        <td><label for="health">Estado de Salud Actual (1: Muy Malo, 5: Muy Bueno):</label></td>
+                        <td><input type="number" id="health" name="health" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="address">Dirección (0: Urbana, 1: Rural):</label></td>
+                        <td><input type="number" id="address" name="address" required></td>
+                        <td><label for="Fjob">Trabajo del Padre:</label></td>
+                        <td><input type="number" id="Fjob" name="Fjob" required></td>
+                        <td><label for="absences">Ausencias:</label></td>
+                        <td><input type="number" id="absences" name="absences" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="famsize">Tamaño de la Familia (0: ≤3, 1: >3):</label></td>
+                        <td><input type="number" id="famsize" name="famsize" required></td>
+                        <td><label for="reason">Razón para Elegir la Escuela:</label></td>
+                        <td><input type="number" id="reason" name="reason" required></td>
+                        <td><label for="romantic">En una Relación Romántica (0: No, 1: Sí):</label></td>
+                        <td><input type="number" id="romantic" name="romantic" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="Pstatus">Estado Parental (0: Juntos, 1: Separados):</label></td>
+                        <td><input type="number" id="Pstatus" name="Pstatus" required></td>
+                        <td><label for="guardian">Tutor (0: Madre, 1: Padre, 2: Otro):</label></td>
+                        <td><input type="number" id="guardian" name="guardian" required></td>
+                        <td><label for="famrel">Calidad de las Relaciones Familiares (1-5):</label></td>
+                        <td><input type="number" id="famrel" name="famrel" required></td>
+                    </tr>
+                    <!-- Información Académica -->
+                    <tr>
+                        <td><label for="traveltime">Tiempo de Viaje (1-4):</label></td>
+                        <td><input type="number" id="traveltime" name="traveltime" required></td>
+                        <td><label for="studytime">Tiempo de Estudio (1-4):</label></td>
+                        <td><input type="number" id="studytime" name="studytime" required></td>
+                        <td><label for="freetime">Tiempo Libre después de la Escuela (1-5):</label></td>
+                        <td><input type="number" id="freetime" name="freetime" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="failures">Fracasos Pasados (0-4):</label></td>
+                        <td><input type="number" id="failures" name="failures" required></td>
+                        <td><label for="schoolsup">Apoyo Educativo Extra (0: No, 1: Sí):</label></td>
+                        <td><input type="number" id="schoolsup" name="schoolsup" required></td>
+                        <td><label for="goout">Salir con Amigos (1-5):</label></td>
+                        <td><input type="number" id="goout" name="goout" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="famsup">Apoyo Educativo Familiar (0: No, 1: Sí):</label></td>
+                        <td><input type="number" id="famsup" name="famsup" required></td>
+                        <td><label for="paid">Clases Extra Pagadas (0: No, 1: Sí):</label></td>
+                        <td><input type="number" id="paid" name="paid" required></td>
+                        <td><label for="G1">Calificación del Primer Periodo (0-20):</label></td>
+                        <td><input type="number" id="G1" name="G1" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="activities">Actividades Extracurriculares (0: No, 1: Sí):</label></td>
+                        <td><input type="number" id="activities" name="activities" required></td>
+                        <td><label for="nursery">Asistió a Guardería (0: No, 1: Sí):</label></td>
+                        <td><input type="number" id="nursery" name="nursery" required></td>
+                        <td><label for="G2">Calificación del Segundo Periodo (0-20):</label></td>
+                        <td><input type="number" id="G2" name="G2" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="higher">Desea Educación Superior (0: No, 1: Sí):</label></td>
+                        <td><input type="number" id="higher" name="higher" required></td>
+                        <td><label for="internet">Acceso a Internet en Casa (0: No, 1: Sí):</label></td>
+                        <td><input type="number" id="internet" name="internet" required></td>
+                    </tr>
+                </tbody>
             </table>
+            <td colspan="2" class="submit-section"><input type="submit" value="Predecir"></td>
         </form>
 
         {% if prediction_general is not none %}
